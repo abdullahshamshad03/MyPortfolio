@@ -11,11 +11,15 @@ const Header = () => {
                     Portfolio<span className='text-red-700 font-bold'>.</span>
                 </h1>
             </Link>
-            
-            <div className='hidden xl:flex gap-8 items-center'>
             <Navbar />
-            <Link href={"/contact"}> <Button>Hire me</Button> </Link>
+            <div className='hidden xl:flex gap-8 items-center cursor-pointer'>
+              <Button asChild variant="ghost">
+            <a href={"/college_resume.pdf"} download> 
+            Download CV
+            </a>
+            </Button> 
             </div>
+            
             
             {/* mobile nav */}
             <div className="xl:hidden">

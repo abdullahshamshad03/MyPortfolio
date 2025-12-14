@@ -43,6 +43,7 @@ const HeroText = () => {
                 transition={{delay:1.8}}
                 className='text-4xl font-medium text-neutral-300'>Web Solutions</motion.p>
             </div>
+            
         </div>
     )
 }
