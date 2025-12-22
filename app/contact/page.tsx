@@ -15,7 +15,7 @@ import Footer from '@/components/Footer';
 const Contact = () => {
     const [result, setResult] = useState("");
 
-    const onSubmit = async (event) => {
+    const onSubmit = async (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         formData.append("access_key", "4dceb5f7-feba-4f87-b2f8-2e30a341b545");

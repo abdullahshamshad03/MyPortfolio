@@ -8,7 +8,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center ">
             <Link href="/">
                 <h1 className='text-4xl font-semibold '>
-                    Portfolio<span className='text-[#18CCFC]/85 font-bold'>.</span>
+                    Portfolio<span className='text-red-700 font-bold'>.</span>
                 </h1>
             </Link>
             <Navbar />
