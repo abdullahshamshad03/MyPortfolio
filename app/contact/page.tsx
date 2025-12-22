@@ -15,9 +15,9 @@ import Footer from '@/components/Footer';
 const Contact = () => {
     const [result, setResult] = useState("");
 
-    const onSubmit = async (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
+        const formData = new FormData(event.currentTarget);
         formData.append("access_key", "4dceb5f7-feba-4f87-b2f8-2e30a341b545");
 
         const response = await fetch("https://api.web3forms.com/submit", {
@@ -90,7 +90,7 @@ const Contact = () => {
                                         </div>
                                 </div>
                         </div>
-                        <Footer containerStyles={undefined} iconStyles={undefined} />
+                        <Footer />
 
 
                  </motion.div>
