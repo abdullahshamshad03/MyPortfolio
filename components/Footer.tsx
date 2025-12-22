@@ -8,7 +8,7 @@ const Footer = ({containerStyles, iconStyles}) => {
         {icon: FaLinkedin, path: "https://www.linkedin.com/in/abdullah2309/"},
     ]
   return (
-    <div className="${containerStyles} p-2 flex justify-center gap-4" >
+    <div className="${containerStyles} p-2 flex gap-4" >
        { socials.map((social, index)=>{
         const Icon = social.icon;
             return <Link key={index} href={social.path} target='_blank' className={iconStyles}>

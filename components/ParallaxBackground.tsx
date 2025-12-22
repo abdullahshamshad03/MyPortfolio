@@ -17,7 +17,7 @@ const parallaxBackground = () => {
                 {/* Mountain Layer 3 */}
                 <div className='absolute inset-0 w-full h-screen -z-40' 
                 style={{
-                    backgroundImage: "url(/assets/mountain-3.jpg)",
+                    backgroundImage: "url(/assets/mountain-3.png)",
                     backgroundPosition: "bottom",
                     backgroundSize: "cover"  
                 }}

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
      <Hero />
-      <Footer containerStyles={undefined} iconStyles={undefined} />
+      {/* <Footer containerStyles={undefined} iconStyles={undefined} /> */}
     </div>
   );
 }

@@ -6,11 +6,11 @@ import { Astronaut } from './ui/astronaut'
 
 
 const Hero = () => {
- 
+
   return (
     <section className='flex flex-col items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space relative z-20'>
       <ParallaxBackground />
-      <div className='w-full max-w-6xl  flex justify-center relative text-white'>
+      <div className='w-full max-w-6xl flex justify-center relative text-white'>
 
         <HeroText containerStyles={undefined} iconStyles={undefined} />
       </div>
