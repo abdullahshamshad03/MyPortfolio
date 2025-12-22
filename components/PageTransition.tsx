@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-const PageTransition = ({children}) => {
+const PageTransition : React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const pathname = usePathname()
   return <AnimatePresence>
     <div key={pathname}>
