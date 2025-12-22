@@ -12,7 +12,7 @@ const Hero = () => {
       <ParallaxBackground />
       <div className='w-full max-w-6xl flex justify-center relative text-white'>
 
-        <HeroText containerStyles={undefined} iconStyles={undefined} />
+        <HeroText />
       </div>
       <figure className='absolute inset-0 pointer-events-none z-0'
         style={{
