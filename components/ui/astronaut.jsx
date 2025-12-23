@@ -6,7 +6,7 @@ import { useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
 export function Astronaut(props) {
-    const group = useRef<THREE.Group>(null!)
+    const group = useRef<THREE.Group>(null)
     const { nodes, materials, animations } = useGLTF('/models/tenhun_falling_spaceman_fanart.glb')
     const { actions } = useAnimations(animations, group)
     useEffect(() => {
