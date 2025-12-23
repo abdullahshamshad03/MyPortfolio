@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/ui/astronaut.jsx", "components/ui/button.tsx", "components/ui/stars-background.jsx", "app/project/page.jsx", "components/Hero.jsx", "app/contact/page.tsx", "components/ui/tracing-beam.jsx", "components/ui/tracing_beam_info.jsx"  ],
+, "components/ui/astronaut.jsx", "components/ui/button.tsx", "components/ui/stars-background.jsx", "app/project/page.jsx", "components/Hero.jsx", "app/contact/page.jsx", "components/ui/tracing-beam.jsx", "components/ui/tracing_beam_info.jsx"  ],
   "exclude": ["node_modules"]
 }
