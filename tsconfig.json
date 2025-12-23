@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "components/ui/astronaut.jsx", "components/ui/button.tsx", "components/ui/stars-background.jsx"  ],
+, "components/ui/astronaut.jsx", "components/ui/button.tsx", "components/ui/stars-background.jsx", "app/project/page.tsx", "components/Hero.jsx"  ],
   "exclude": ["node_modules"]
 }

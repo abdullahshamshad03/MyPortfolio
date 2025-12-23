@@ -81,7 +81,7 @@ export function StarsBackground({
       stars.forEach((star) => {
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
-        ctx.fillStyle = rgba(255, 255, 255, `${star.opacity}`)
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`
         ctx.fill()
 
         if (star.twinkleSpeed !== null) {

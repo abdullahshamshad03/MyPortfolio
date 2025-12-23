@@ -4,8 +4,10 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 // Mock hook for demo
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 const useOutsideClick = (ref: React.RefObject<HTMLDivElement | null>, callback: Function) => {
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;

@@ -38,7 +38,7 @@ const Contact = () => {
 
                     {/* <StarsBackground className='pointer-events-none' /> */}
                     <h3 className=' text-2xl pb-3'>
-                        Let's work together
+                        Let&apos;s work together
                     </h3>
 
                     <h2 className='text-6xl  font-semibold'>
