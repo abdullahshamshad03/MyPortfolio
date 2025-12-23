@@ -15,7 +15,7 @@ import Footer from '@/components/Footer';
 const Contact = () => {
     const [result, setResult] = useState("");
 
-    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
         formData.append("access_key", "4dceb5f7-feba-4f87-b2f8-2e30a341b545");
@@ -30,75 +30,70 @@ const Contact = () => {
     };
 
     return (
-        <div className='relative mt-5 flex justify-center items-center gap-6'>
-                <ShootingStars className=' fixed inset-0 -z-10 pointer-events-none' />
-                <StarsBackground className=' fixed inset-0 -z-20 pointer-events-none' />
+        <div className='relative mt-5 flex flex-col lg:flex-row justify-center items-center gap-6 px-4 lg:px-0'>
+                <ShootingStars className='fixed inset-0 -z-10 pointer-events-none' />
+                <StarsBackground className='fixed inset-0 -z-20 pointer-events-none' />
 
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" } }} className=' w-full max-w-xl p-8     rounded-3xl  '>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" } }} className='w-full max-w-xl p-6 lg:p-8 rounded-3xl'>
 
-                    {/* <StarsBackground className='pointer-events-none' /> */}
-                    <h3 className=' text-2xl pb-3'>
+                    <h3 className='text-xl lg:text-2xl pb-3'>
                         Let&apos;s work together
                     </h3>
 
-                    <h2 className='text-6xl  font-semibold'>
+                    <h2 className='text-4xl lg:text-6xl font-semibold'>
                         Get in Touch
                     </h2>
 
                     <form className='w-full max-w-xl py-4' onSubmit={onSubmit}>
                         <div className='grid grid-cols-1 mt-3 mb-8'>
-                            <label htmlFor="">Name</label>
-                            <Input type="name" name='name' placeholder='Enter your name' required className='flex-1 pl-5 border-[0.5px] p-2 outline-none border-gray-400 mb-3' />
+                            <label htmlFor="name" className='mb-1'>Name</label>
+                            <Input type="text" id="name" name='name' placeholder='Enter your name' required className='flex-1 pl-5 border-[0.5px] p-2 outline-none border-gray-400 mb-3' />
 
-                            <label htmlFor="">Email</label>
-                            <Input type="email" name='email' placeholder='Enter your email' required className='flex-1 pl-5 border-[0.5px] p-2 outline-none border-gray-400' />
+                            <label htmlFor="email" className='mb-1'>Email</label>
+                            <Input type="email" id="email" name='email' placeholder='Enter your email' required className='flex-1 pl-5 border-[0.5px] p-2 outline-none border-gray-400' />
                         </div>
-                        <label htmlFor="">Message</label>
-                        <Textarea name="message" cols={20} placeholder='Type your Message' className='outline-none border-[0.5px] w-full max-w-full resize-none p-3 border-gray-400'></Textarea>
+                        <label htmlFor="message" className='mb-1 block'>Message</label>
+                        <Textarea id="message" name="message" rows={6} placeholder='Type your Message' className='outline-none border-[0.5px] w-full max-w-full resize-none p-3 border-gray-400'></Textarea>
 
                         <div className='flex justify-start'>
-                            <Button variant="ghost" className='mt-3 p-5 cursor-pointer rounded-full flex items-center'>Submit </Button>
+                            <Button type="submit" variant="ghost" className='mt-3 p-5 cursor-pointer rounded-full flex items-center'>Submit</Button>
                         </div>
 
-                        <motion.p initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.5, duration: 1, ease:"easeIn"}}} className='text-center'>{result}</motion.p>
+                        {result && (
+                            <motion.p initial={{opacity:0}} animate={{opacity:1, transition:{delay:0.5, duration: 1, ease:"easeIn"}}} className='text-center mt-2'>{result}</motion.p>
+                        )}
                     </form>
 
                 </motion.div>
 
-                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" } }} className='flex flex-col items-start   justify-end w-full md:w-1/2 lg:w-1/4 px-6 py-0  '>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" } }} className='flex flex-col items-start justify-end w-full md:w-1/2 lg:w-1/4 px-6 py-0'>
 
-                        <div className='flex flex-col justify-center gap-8 py-14 '>
-                                <div className='flex gap-4 justify-start items-start'>
-                                        <FaEnvelope className='w-12 h-12  text-white p-2 '/>
-                                        <div>
-                                        <span className='text-md'>Email</span>
-                                        <p className='text-lg'>khanabd@gmail.com</p>
-                                        </div>
-                                </div>
-                                <div className='flex gap-4 justify-start items-center'>
-                                        <FaPhone className='w-12 h-12 text-white p-2 '/>
-                                        <div>
-                                        <span className='text-md'>Phone</span>
-                                        <p className='text-lg'>(+91) 93113-82309</p>
-                                        </div>
-                                </div>
-                                <div className='flex gap-4 justify-start items-center'>
-                                        <FaMapMarkerAlt className='w-12 h-12  text-white p-2 '/>
-                                        <div>
-                                        <span className='text-md'>Location</span>
-                                        <p className='text-lg'>Batla House, Okhla, New-Delhi</p>
-                                        </div>
-                                </div>
+                    <div className='flex flex-col justify-center gap-6 lg:gap-8 py-8 lg:py-14'>
+                        <div className='flex gap-4 justify-start items-start'>
+                            <FaEnvelope className='w-10 h-10 lg:w-12 lg:h-12 text-white p-2'/>
+                            <div>
+                                <span className='text-sm lg:text-md block'>Email</span>
+                                <p className='text-base lg:text-lg break-all'>khanabd@gmail.com</p>
+                            </div>
                         </div>
-                        <Footer />
+                        <div className='flex gap-4 justify-start items-center'>
+                            <FaPhone className='w-10 h-10 lg:w-12 lg:h-12 text-white p-2'/>
+                            <div>
+                                <span className='text-sm lg:text-md block'>Phone</span>
+                                <p className='text-base lg:text-lg'>(+91) 93113-82309</p>
+                            </div>
+                        </div>
+                        <div className='flex gap-4 justify-start items-center'>
+                            <FaMapMarkerAlt className='w-10 h-10 lg:w-12 lg:h-12 text-white p-2'/>
+                            <div>
+                                <span className='text-sm lg:text-md block'>Phone</span>
+                                <p className='text-base lg:text-lg'>Batla House, Okhla, New-Delhi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <Footer />
 
-
-                 </motion.div>
-
-                 
-                 
-           
-           
+                </motion.div>
             </div>
     )
 }

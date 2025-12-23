@@ -1,14 +1,11 @@
 "use client";
 
 import React, { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 
-// Mock hook for demo
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
-const useOutsideClick = (ref: React.RefObject<HTMLDivElement | null>, callback: Function) => {
+const useOutsideClick = (ref, callback) => {
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const listener = (event: any) => {
+    const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
@@ -24,12 +21,12 @@ const useOutsideClick = (ref: React.RefObject<HTMLDivElement | null>, callback: 
 };
 
 export default function ExpandableCardDemo() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(null);
+  const ref = useRef(null);
   const id = useId();
 
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
+    function onKeyDown(event) {
       if (event.key === "Escape") {
         setActive(false);
       }
@@ -49,9 +46,9 @@ export default function ExpandableCardDemo() {
 
   return (
     <motion.div 
-      initial={{opacity:0}} 
-      animate={{opacity:1, transition: {delay:0.5, duration: 0.6, ease: "easeInOut"}}} 
-      className="my-15 p-4"
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" }}} 
+      className="my-8 md:my-15 p-4 md:p-6"
     >
       <AnimatePresence>
         {active && typeof active === "object" && (
@@ -63,25 +60,26 @@ export default function ExpandableCardDemo() {
           />
         )}
       </AnimatePresence>
+      
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
+          <div className="fixed inset-0 grid place-items-center z-[100] p-4">
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[95vw] md:max-w-[500px] max-h-[85vh] flex flex-col bg-white dark:bg-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden relative"
             >
+              <motion.button
+                key={`button-${active.title}-${id}`}
+                layout
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.05 } }}
+                className="flex absolute top-2 right-2 items-center justify-center bg-white rounded-full h-8 w-8 md:h-6 md:w-6 z-50 shadow-lg"
+                onClick={() => setActive(null)}
+              >
+                <CloseIcon />
+              </motion.button>
               {active.src && (
                 <motion.div layoutId={`image-${active.title}-${id}`}>
                   <img
@@ -89,23 +87,23 @@ export default function ExpandableCardDemo() {
                     height={200}
                     src={active.src}
                     alt={active.title}
-                    className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                    className="w-full h-48 sm:h-56 md:h-64 rounded-t-2xl md:rounded-tr-lg md:rounded-tl-lg object-cover object-top"
                   />
                 </motion.div>
               )}
 
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div>
+              <div className="flex-1 overflow-y-auto">
+                <div className="flex flex-col sm:flex-row justify-between items-start gap-3 p-4 md:p-6">
+                  <div className="flex-1">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                      className="font-bold text-lg md:text-xl text-neutral-700 dark:text-neutral-200 mb-1"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      layoutId={`description-${active.title}-${id}`}
+                      className="text-sm md:text-base text-neutral-600 dark:text-neutral-400"
                     >
                       {active.description}
                     </motion.p>
@@ -117,19 +115,20 @@ export default function ExpandableCardDemo() {
                       href={active.ctaLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white hover:bg-green-600 transition-colors"
+                      className="px-4 py-2 md:py-3 text-sm rounded-full font-bold bg-gray-900 text-white hover:bg-red-600 transition-colors whitespace-nowrap"
                     >
                       {active.ctaText}
                     </motion.a>
                   )}
                 </div>
-                <div className="pt-4 relative px-4">
+                
+                <div className="px-4 md:px-6 pb-6">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-sm md:text-base dark:text-neutral-400 leading-relaxed"
                   >
                     {typeof active.content === "function" ? active.content() : active.content}
                   </motion.div>
@@ -139,15 +138,16 @@ export default function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      
+      <ul className="max-w-full md:max-w-2xl mx-auto w-full flex flex-col gap-3 md:gap-4">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 md:p-6 flex flex-col md:flex-row justify-between items-center hover:bg-gray-900/50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer transition-colors"
           >
-            <div className="flex gap-4 flex-col md:flex-row">
+            <div className="flex gap-4 flex-col md:flex-row items-center md:items-start w-full md:w-auto">
               {card.src && (
                 <motion.div layoutId={`image-${card.title}-${id}`}>
                   <img
@@ -155,20 +155,20 @@ export default function ExpandableCardDemo() {
                     height={100}
                     src={card.src}
                     alt={card.title}
-                    className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                    className="h-32 w-32 sm:h-40 sm:w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
                   />
                 </motion.div>
               )}
-              <div>
+              <div className="flex-1">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-base md:text-lg text-neutral-100 dark:text-neutral-200 text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  layoutId={`description-${card.title}-${id}`}
+                  className="text-sm md:text-base text-neutral-400 dark:text-neutral-400 text-center md:text-left mt-1"
                 >
                   {card.description}
                 </motion.p>
@@ -177,7 +177,7 @@ export default function ExpandableCardDemo() {
             {card.ctaText && (
               <motion.button
                 layoutId={`button-${card.title}-${id}`}
-                className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0 transition-colors"
+                className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-red-700 hover:text-white text-black mt-4 md:mt-0 transition-colors"
               >
                 {card.ctaText}
               </motion.button>
@@ -217,7 +217,7 @@ const cards = [
   {
     description: "React",
     title: "EV-Car",
-    src: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=500&q=80",
+    src: "/assets/evcar.png",
     ctaText: "Visit",
     ctaLink: "https://ev-car-webpage-e463.vercel.app/",
     content: () => {
@@ -233,7 +233,7 @@ const cards = [
   {
     description: "React.js, React Smooth Scroll, EmailJS, Vercel",
     title: "Edusity",
-    src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&q=80",
+    src: "/assets/edusity.png",
     ctaText: "Visit",
     ctaLink: "https://edusity-website-pi.vercel.app/",
     content: () => {
@@ -250,7 +250,7 @@ const cards = [
   {
     description: "HTML, CSS, JavaScript",
     title: "To Do List",
-    src: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&q=80",
+    src: "/assets/todolist.png",
     ctaText: "Visit",
     ctaLink: "https://to-do-list-app-blush-nu.vercel.app/",
     content: () => {
@@ -284,7 +284,7 @@ const cards = [
     description: "Python, FastAPI, Scikit-Learn, Streamlit",
     title: "Insurance Premium Predictor",
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80",
-    ctaText: "Learn More",
+    ctaText: "Visit",
     ctaLink: "#",
     content: () => {
       return (
