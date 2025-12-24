@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
+import React from "react";
 
 
 const geistSans = Geist({
@@ -33,7 +34,10 @@ export default function RootLayout({
         
         <Header />
         <PageTransition>
+          <React.StrictMode>
                    {children}
+
+          </React.StrictMode>
         </PageTransition>
 
        
