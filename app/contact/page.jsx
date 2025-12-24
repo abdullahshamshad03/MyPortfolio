@@ -73,7 +73,7 @@ const Contact = () => {
                             <FaEnvelope className='w-10 h-10 lg:w-12 lg:h-12 text-white p-2'/>
                             <div>
                                 <span className='text-sm lg:text-md block'>Email</span>
-                                <p className='text-base lg:text-lg break-all'>khanabd@gmail.com</p>
+                                <p className='text-base lg:text-lg break-all'>khanabd2303@gmail.com</p>
                             </div>
                         </div>
                         <div className='flex gap-4 justify-start items-center'>
