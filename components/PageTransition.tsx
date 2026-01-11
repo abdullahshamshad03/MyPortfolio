@@ -1,12 +1,12 @@
 "use client"
-import { AnimatePresence, motion } from 'motion/react'
-import { usePathname } from 'next/navigation'
+import { AnimatePresence, motion } from 'framer-motion'
+
 import React from 'react'
 
 const PageTransition : React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const pathname = usePathname()
-  return <AnimatePresence>
-    <div key={pathname}>
+    
+  return <AnimatePresence mode='wait'>
+    <div>
             <motion.div initial = {{opacity: 1 }} animate = {{opacity: 0, transition:{
                 delay: 0.5, duration:0.4, ease: "easeInOut"
             }}} 
