@@ -19,7 +19,7 @@ const Header = () => {
             {/* Download CV Button - Desktop Only */}
             <div className='hidden md:flex items-center'>
                 <Button asChild variant="ghost">
-                    <a href="/college_resume.pdf" download> 
+                    <a href="/Abdullah_Resume.pdf" download> 
                         Download CV
                     </a>
                 </Button> 

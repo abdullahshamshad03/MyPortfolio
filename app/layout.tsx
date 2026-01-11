@@ -34,10 +34,7 @@ export default function RootLayout({
         
         <Header />
         <PageTransition>
-          <React.StrictMode>
                    {children}
-
-          </React.StrictMode>
         </PageTransition>
 
        

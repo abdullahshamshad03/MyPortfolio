@@ -86,7 +86,7 @@ const Contact = () => {
                         <div className='flex gap-4 justify-start items-center'>
                             <FaMapMarkerAlt className='w-10 h-10 lg:w-12 lg:h-12 text-white p-2'/>
                             <div>
-                                <span className='text-sm lg:text-md block'>Phone</span>
+                                <span className='text-sm lg:text-md block'>Address</span>
                                 <p className='text-base lg:text-lg'>Batla House, Okhla, New-Delhi</p>
                             </div>
                         </div>
