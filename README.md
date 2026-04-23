@@ -102,12 +102,4 @@ Deployed on **Vercel** with seamless CI/CD integration.
 
 * Email: [khanabd2303@gmail.com](mailto:khanabd2303@gmail.com)
 * GitHub: https://github.com/abdullahshamshad03
-
----
-
-## ⭐ If you like this project
-
-Give it a ⭐ and feel free to fork it!
-
-
-If you like this project, consider giving it a ⭐ on GitHub!
+ 
