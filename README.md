@@ -57,6 +57,7 @@ MyPortfolio/
 │── lib/                  # Utility functions
 │── public/               # Static assets & resume
 │── styles/               # Global styles
+```
 ---
 
 ## 🧩 Architecture Highlights
@@ -65,7 +66,6 @@ MyPortfolio/
 * Reusable UI system using shadcn components
 * Clean routing using Next.js App Router
 * Separation of UI, logic, and utilities
-```
 ---
 
 ## ⚙️ Run Locally
