@@ -1,6 +1,6 @@
 # 🚀 Abdullah Shamshad Khan – Developer Portfolio
 
-🔗 **Live Website:** https://my-portfolio-zeta-one-46.vercel.app/
+🔗 **Live Website:** https://my-portfolio-zeta-one-46.vercel.app/<br>
 📂 **Repository:** https://github.com/abdullahshamshad03/MyPortfolio
 
 ---
@@ -22,17 +22,25 @@ Designed with a focus on **clean UI, smooth user experience, and performance opt
 
 ---
 
-## ✨ Key Features
-
-* Multi-page structured layout *(Home, About, Projects, Resume, Journey, Contact)*
-* Responsive design across all devices
-* Smooth transitions and interactive UI components
-* Functional contact form (EmailJS integration)
-* Resume download support
-* Optimized performance using Next.js
+✨ Features
+🌐 Multi-page routing (App Router)
+Home
+About
+Projects
+Resume
+Journey
+Contact
+🎨 Modern UI with interactive components
+Parallax backgrounds
+Animated stars & visual effects
+Page transitions
+📱 Fully responsive design
+⚡ Optimized performance with Next.js
+📬 Functional contact form using EmailJS
+🧩 Reusable component-based architecture
+📄 Downloadable resume integration
 
 ---
-<img width="945" height="443" alt="ss1" src="https://github.com/user-attachments/assets/bdb3877a-ca97-4fbc-ac94-acac0de1bbd3" />
 
 📂 Project Structure
 MyPortfolio/
@@ -84,11 +92,11 @@ npm run dev
 ### 🏠 Home Page
 <img width="945" height="443" alt="ss1" src="https://github.com/user-attachments/assets/0d203a1f-06d2-4e23-b4ee-300d721f2688" />
 
-### 📂 Projects Section
-![Projects](./screenshots/projects.png)
+### 📂 Resume Section
+<img width="908" height="410" alt="ss2" src="https://github.com/user-attachments/assets/30c984ac-62a1-4603-9aa2-260bd6bf80de" />
 
 ### 📬 Contact Page
-![Contact](./screenshots/contact.png)
+<img width="960" height="433" alt="ss4" src="https://github.com/user-attachments/assets/d22538f5-8a7f-41a7-9a1e-431df9679f99" />
 
 ---
 
