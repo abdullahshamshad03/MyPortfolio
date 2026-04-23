@@ -33,7 +33,9 @@ Designed with a focus on **clean UI, smooth user experience, and performance opt
 - 📄 Downloadable resume integration  
 
 ---
+## 📂 Project Structure
 
+```bash
 MyPortfolio/
 │── app/                  # App router pages (Next.js)
 │   ├── home/
@@ -63,7 +65,7 @@ MyPortfolio/
 * Reusable UI system using shadcn components
 * Clean routing using Next.js App Router
 * Separation of UI, logic, and utilities
-
+```
 ---
 
 ## ⚙️ Run Locally
