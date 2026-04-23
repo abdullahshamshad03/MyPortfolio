@@ -22,27 +22,18 @@ Designed with a focus on **clean UI, smooth user experience, and performance opt
 
 ---
 
-✨ Features
-🌐 Multi-page routing (App Router)
-Home
-About
-Projects
-Resume
-Journey
-Contact
-🎨 Modern UI with interactive components
-Parallax backgrounds
-Animated stars & visual effects
-Page transitions
-📱 Fully responsive design
-⚡ Optimized performance with Next.js
-📬 Functional contact form using EmailJS
-🧩 Reusable component-based architecture
-📄 Downloadable resume integration
+## ✨ Features
+
+- 🌐 Multi-page routing (Home, About, Projects, Resume, Journey, Contact)  
+- 🎨 Modern UI with interactive components (Parallax, animations, transitions)  
+- 📱 Fully responsive design  
+- ⚡ Optimized performance with Next.js  
+- 📬 Functional contact form (EmailJS)  
+- 🧩 Reusable component-based architecture  
+- 📄 Downloadable resume integration  
 
 ---
 
-📂 Project Structure
 MyPortfolio/
 │── app/                  # App router pages (Next.js)
 │   ├── home/
@@ -64,7 +55,6 @@ MyPortfolio/
 │── lib/                  # Utility functions
 │── public/               # Static assets & resume
 │── styles/               # Global styles
-
 ---
 
 ## 🧩 Architecture Highlights
