@@ -1,69 +1,40 @@
 # 🚀 Abdullah Shamshad Khan – Developer Portfolio
 
-A modern, interactive, and responsive **personal portfolio website** built using **Next.js (App Router)** to showcase my projects, skills, and journey as a Full Stack Developer.
-
-🔗 **Live Demo:** [Add your Vercel link here]
+🔗 **Live Website:** https://my-portfolio-zeta-one-46.vercel.app/
 📂 **Repository:** https://github.com/abdullahshamshad03/MyPortfolio
 
 ---
 
-## 📌 Overview
+## 📌 About
 
-This portfolio is designed as a **professional digital presence** to highlight my:
+A modern, high-performance **developer portfolio** built using **Next.js** to showcase my projects, technical skills, and experience.
 
-* Technical skills
-* Projects
-* Resume
-* Career journey
-
-Built with a focus on **performance, UI/UX, and smooth navigation**, the application uses modern frontend practices and reusable components.
+Designed with a focus on **clean UI, smooth user experience, and performance optimization**, this portfolio represents my work as a **Full Stack Developer with growing expertise in AI/ML systems**.
 
 ---
 
 ## 🛠 Tech Stack
 
-* **Framework:** Next.js (App Router)
-* **Frontend:** React.js, Tailwind CSS
+* **Frontend:** Next.js (App Router), React.js, Tailwind CSS
 * **UI Components:** shadcn/ui
-* **Styling:** Custom CSS + Tailwind
-* **Animations & Effects:** Custom components (Parallax, Stars, Transitions)
-* **Forms:** EmailJS (Contact Page)
+* **Backend Services:** EmailJS
 * **Deployment:** Vercel
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-* 🌐 **Multi-page routing (App Router)**
-
-  * Home
-  * About
-  * Projects
-  * Resume
-  * Journey
-  * Contact
-
-* 🎨 **Modern UI with interactive components**
-
-  * Parallax backgrounds
-  * Animated stars & visual effects
-  * Page transitions
-
-* 📱 **Fully responsive design**
-
-* ⚡ **Optimized performance with Next.js**
-
-* 📬 **Functional contact form using EmailJS**
-
-* 🧩 **Reusable component-based architecture**
-
-* 📄 **Downloadable resume integration**
+* Multi-page structured layout *(Home, About, Projects, Resume, Journey, Contact)*
+* Responsive design across all devices
+* Smooth transitions and interactive UI components
+* Functional contact form (EmailJS integration)
+* Resume download support
+* Optimized performance using Next.js
 
 ---
+<img width="945" height="443" alt="ss1" src="https://github.com/user-attachments/assets/bdb3877a-ca97-4fbc-ac94-acac0de1bbd3" />
 
-## 📂 Project Structure
-
-```bash
+📂 Project Structure
 MyPortfolio/
 │── app/                  # App router pages (Next.js)
 │   ├── home/
@@ -85,58 +56,58 @@ MyPortfolio/
 │── lib/                  # Utility functions
 │── public/               # Static assets & resume
 │── styles/               # Global styles
+
+---
+
+## 🧩 Architecture Highlights
+
+* Component-based design for scalability
+* Reusable UI system using shadcn components
+* Clean routing using Next.js App Router
+* Separation of UI, logic, and utilities
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/abdullahshamshad03/MyPortfolio.git
+cd MyPortfolio
+npm install
+npm run dev
 ```
 
 ---
 
 ## 📸 Screenshots
 
-*Add screenshots for better visibility (important for recruiters):*
+### 🏠 Home Page
+<img width="945" height="443" alt="ss1" src="https://github.com/user-attachments/assets/0d203a1f-06d2-4e23-b4ee-300d721f2688" />
 
-* Home Page
-* Projects Section
-* Contact Page
+### 📂 Projects Section
+![Projects](./screenshots/projects.png)
 
----
-
-## ⚙️ Installation & Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/abdullahshamshad03/MyPortfolio.git
-
-# Navigate into project
-cd MyPortfolio
-
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-```
+### 📬 Contact Page
+![Contact](./screenshots/contact.png)
 
 ---
 
 ## 🌍 Deployment
 
-This project is deployed on **Vercel** for fast and scalable hosting.
-
-Steps to deploy:
-
-1. Push your code to GitHub
-2. Import repository into Vercel
-3. Deploy instantly
+Deployed on **Vercel** with seamless CI/CD integration.
 
 ---
 
 ## 📬 Contact
 
-* 📧 Email: [khanabd2303@gmail.com](mailto:khanabd2303@gmail.com)
-* 💻 GitHub: https://github.com/abdullahshamshad03
-* 🔗 LinkedIn: [Add your LinkedIn link]
+* Email: [khanabd2303@gmail.com](mailto:khanabd2303@gmail.com)
+* GitHub: https://github.com/abdullahshamshad03
 
 ---
 
-## ⭐ Support
+## ⭐ If you like this project
+
+Give it a ⭐ and feel free to fork it!
+
 
 If you like this project, consider giving it a ⭐ on GitHub!
